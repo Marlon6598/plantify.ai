@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+header { /* Header at the top of the page */
+    color: #ffffff;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: 80px;
+    background-color: #282828;
+    padding: 0px;
+    line-height: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+.navbar {
+    float: left;
+}
+.button { /* Return to Home button located within the header */
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    top: 23px;
+    margin-right: auto;
+    background-color: #00bfff00;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+a {
+    float: left;
+}
+h3 { /* Text in the header of the page */
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+video { /* The video in the background */
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
