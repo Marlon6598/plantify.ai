@@ -16,7 +16,7 @@
     <script>
         var homeButton = document.getElementById("homeButton");
 
-        homeButton.addEventListener("mousedown", function() {
+        homeButton.addEventListener("mouseover", function() {
             homeButton.innerText = "[HOME]";
         });
         homeButton.addEventListener("mouseup", function() {
@@ -33,17 +33,24 @@
     <script>
         var scrollButton = document.getElementById("scrollButton");
 
-        scrollButton.addEventListener("mousedown", function() {
+        scrollButton.addEventListener("mouseover", function() {
             scrollButton.innerText = "[LEARN MORE]";
         });
         scrollButton.addEventListener("mouseup", function() {
             scrollButton.innerText = "[LEARN MORE]";
         });
-        function learnMore() {
-            window.location.href = "static/html/page-2.html";
-        };
         scrollButton.addEventListener("mouseleave", function() {
             scrollButton.innerText = "LEARN MORE";
+        });
+    </script>
+
+    <script>
+        document.getElementById('scrollButton').addEventListener('click', function() {
+        var scrollTo = window.innerHeight; // Adjust the value to control the scroll distance
+        window.scrollBy({
+            top: scrollTo,
+            behavior: 'smooth' // Add smooth scrolling effect
+        });
         });
     </script>
 
