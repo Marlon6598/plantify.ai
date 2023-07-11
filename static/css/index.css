@@ -1,10 +1,12 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap');
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-  }
+}
 
 header { /* Header at the top of the page */
-    color: #ffffff;
     position: relative;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -19,7 +21,14 @@ header { /* Header at the top of the page */
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
+}
+header a.button {
+    display: inline-block; /* Ensures the buttons are displayed in a row */
+    margin-right: 10px; /* Adjust the margin value as needed for spacing between buttons */
+}
+#scrollButton {
+    margin-left: 110px; /* Adjust the margin value as needed for spacing between the previous button and this button */
 }
 .navbar {
     float: left;
@@ -42,12 +51,35 @@ header { /* Header at the top of the page */
 a {
     float: left;
 }
-h3 { /* Text in the header of the page */
-    font-family: 'Wix Madefor Display', sans-serif;
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 72px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    padding-top: 100px;
+    margin-bottom: -30px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 96px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: center;
+}
+h3 { /* Text in the page header */
+    font-family: 'Nunito', sans-serif;
     font-size: 24px;
     color: #FFFFFF;
     margin: 0;
     text-align: center;
+}
+.text-block p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
 }
 video { /* The video in the background */
     content: '';
@@ -59,5 +91,26 @@ video { /* The video in the background */
     height: 100%;
     object-fit: cover;
     background-color: rgba(0, 0, 0, 0.2);
-    z-index: -1;
+    z-index: -2;
 }
+.overlay {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Adjust the background color as needed */
+    z-index: -1;
+  }
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #282828;
+    padding: 10px 0;
+}
+.additional-content {
+    height: 1000px;
+  }
