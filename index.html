@@ -8,28 +8,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <header>
-        <a href="index.html"><button class="button", title="Click here to go to the home page">[ Home ]</button></a>
-        <button class="button", id ="scrollButton", title="Click here to learn more">[ Learn More ]</button>
+        <button class="button" id="homeButton" title="Click here to go to the home page" onclick="goHome(this)">HOME</button>
+        <button class="button" id="scrollButton" title="Click here to learn more" onclick="learnMore(this)">LEARN MORE</button>
         <h3>Project 4 - Team Lannister</h3>
     </header>
+
+    <script>
+        var homeButton = document.getElementById("homeButton");
+
+        homeButton.addEventListener("mousedown", function() {
+            homeButton.innerText = "[HOME]";
+        });
+        homeButton.addEventListener("mouseup", function() {
+            homeButton.innerText = "[HOME]";
+        });
+        function goHome() {
+            window.location.href = "index.html";
+        };
+        homeButton.addEventListener("mouseleave", function() {
+            homeButton.innerText = "HOME";
+        });
+    </script>
+
+    <script>
+        var scrollButton = document.getElementById("scrollButton");
+
+        scrollButton.addEventListener("mousedown", function() {
+            scrollButton.innerText = "[LEARN MORE]";
+        });
+        scrollButton.addEventListener("mouseup", function() {
+            scrollButton.innerText = "[LEARN MORE]";
+        });
+        function learnMore() {
+            window.location.href = "static/html/page-2.html";
+        };
+        scrollButton.addEventListener("mouseleave", function() {
+            scrollButton.innerText = "LEARN MORE";
+        });
+    </script>
+
 </head>
 
 <body>
         <center>
-            <h1>Test Title<br>Test Subtitle</h1>
+            <h1>[I.O.U. A CATCHY NAME]<br></h1><h2>AI-BASED PLANT IDENTIFIER</h2>
 
             <div class="text-block">
-                <h2>Test text</h2>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+                <p>Upload a picture of a plant and we'll tell you what it is</p>
             </div>
 
-            <button title="Try out the machine"><a href="Static/html/page-2.html">Get Started</a></button>
+            <button title="Try out the machine"><a href="static/html/page-2.html">Get Started</a></button>
         </center>
+
+        <div class="additional-content">
+            <!-- (Blank space that makes the webpage temporarily, artificially longer) -->
+          </div>
     
         <video autoplay loop muted playsinline>
             <source src="/images/website/background-video.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
+        <div class="overlay"></div>
 
     <footer><em>Copyright &copy; 2023 Team Lannister - All rights reserved.</em></footer>
 </body>
