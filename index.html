@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <title>Team Lannister - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <header>
+        <button class="button" id="homeButton" title="Click here to go to the home page" onclick="goHome(this)">HOME</button>
+        <button class="button" id="scrollButton" title="Click here to learn more" onclick="learnMore(this)">LEARN MORE</button>
+        <h3>Project 4 - Team Lannister</h3>
+    </header>
+
+    <script>
+        var homeButton = document.getElementById("homeButton");
+
+        homeButton.addEventListener("mouseover", function() {
+            homeButton.innerText = "[HOME]";
+        });
+        homeButton.addEventListener("mouseup", function() {
+            homeButton.innerText = "[HOME]";
+        });
+        function goHome() {
+            window.location.href = "index.html";
+        };
+        homeButton.addEventListener("mouseleave", function() {
+            homeButton.innerText = "HOME";
+        });
+    </script>
+
+    <script>
+        var scrollButton = document.getElementById("scrollButton");
+
+        scrollButton.addEventListener("mouseover", function() {
+            scrollButton.innerText = "[LEARN MORE]";
+        });
+        scrollButton.addEventListener("mouseup", function() {
+            scrollButton.innerText = "[LEARN MORE]";
+        });
+        scrollButton.addEventListener("mouseleave", function() {
+            scrollButton.innerText = "LEARN MORE";
+        });
+    </script>
+
+    <script>
+        document.getElementById('scrollButton').addEventListener('click', function() {
+        var scrollTo = window.innerHeight; // Adjust the value to control the scroll distance
+        window.scrollBy({
+            top: scrollTo,
+            behavior: 'smooth' // Add smooth scrolling effect
+        });
+        });
+    </script>
+
+</head>
+
+<body>
+        <center>
+            <h1>[I.O.U. A CATCHY NAME]<br></h1><h2>AI-BASED PLANT IDENTIFIER</h2>
+
+            <div class="text-block">
+                <p>Upload a picture of a plant and we'll tell you what plant it is</p> 
+            </div>
+            
+            <div class="button-container">
+                <button class="button getStarted" onclick="navigateToPage()">GET STARTED</button>
+            </div>
+            <script>
+                function navigateToPage() {window.location.href = "static/html/page-2.html"};
+            </script>
+        </center>
+
+        <div class="additional-content">
+            <!-- (Blank space that makes the webpage temporarily, artificially longer) -->
+          </div>
+    
+        <video autoplay loop muted playsinline>
+            <source src="/images/website/background-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="overlay"></div>
+
+    <footer><em>Copyright &copy; 2023 Team Lannister - All rights reserved.</em></footer>
+</body>
+
+</html>
