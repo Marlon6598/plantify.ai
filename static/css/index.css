@@ -141,18 +141,19 @@ video { /* The video in the background */
     margin: 0; /* Removes the default margin for the paragraph */
     width: 60%;
 }
-.bg-1 {
-    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-1.jpg');
-}
-.bg-2 {
-    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-2.jpg');
-}
-.bg-3 {
-    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-3.jpg');
-}
-.bg-4 {
-    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-4.jpg');
-}
+.bg-1 {background-image: url('../../images/website/bg-1.jpg')}
+.bg-2 {background-image: url('../../images/website/bg-2.jpg')}
+.bg-3 {background-image: url('../../images/website/bg-3.jpg')}
+.bg-4 {background-image: url('../../images/website/bg-4.jpg')}
+.bg-5 {background-image: url('../../images/website/bg-5.jpg')}
+.bg-6 {background-image: url('../../images/website/bg-6.jpg')}
+.bg-7 {background-image: url('../../images/website/bg-7.jpg')}
+.bg-8 {background-image: url('../../images/website/bg-8.jpg')}
+.bg-9 {background-image: url('../../images/website/bg-9.jpg')}
+.bg-10 {background-image: url('../../images/website/bg-10.jpg')}
+.bg-11 {background-image: url('../../images/website/bg-11.jpg')}
+.bg-12 {background-image: url('../../images/website/bg-12.jpg')}
+
 footer { /* The footer. */
     position: relative;
     width: 100%;
