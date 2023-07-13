@@ -2,23 +2,95 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <title>Test Title</title>
-  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/page-2.css">
+  <title>Plantify.ai - Get Started</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <header>
-    <a href="../../index.html">
-    <button class="button", title="Return to Home (bubble)">Return Home</button></a>
+    <button class="button" id="homeButton" title="Click here to go to the home page" onclick="goHome(this)">RETURN HOME</button>
+    <h3>Project 4 - Team Lannister</h3>
   </header>
 
+  <script>
+    var homeButton = document.getElementById("homeButton");
+
+    homeButton.addEventListener("mouseover", function() {
+      homeButton.innerText = "[RETURN HOME]";
+    });
+    homeButton.addEventListener("mouseup", function() {
+      homeButton.innerText = "[RETURN HOME]";
+    });
+    function goHome() {
+      window.location.href = "../../index.html";
+    };
+    homeButton.addEventListener("mouseleave", function() {
+      homeButton.innerText = "RETURN HOME";
+    });
+  </script>
 </head>
 
 <body>
 
-  <footer>
-    <em>Copyright &copy; 2023 Team Lannister - All rights reserved.</em>
-  </footer>
 
+  <div class="square-container">
+    <div id="drop-container">
+      <p>Drag and drop an image here,<br> or click to upload...</p>
+      <input type="file" id="file-input" style="display: none;">
+    </div>
+  </div>
+  
+  <div id="image-container"></div>
+  
+  <script>
+    const dropContainer = document.getElementById('drop-container');
+    const fileInput = document.getElementById('file-input');
+    const imageContainer = document.getElementById('image-container');
+  
+    dropContainer.addEventListener('click', function() {
+      fileInput.click();
+    });
+  
+    dropContainer.addEventListener('dragenter', preventDefault, false);
+    dropContainer.addEventListener('dragover', preventDefault, false);
+    dropContainer.addEventListener('dragleave', preventDefault, false);
+    dropContainer.addEventListener('drop', handleFileSelect, false);
+  
+    function preventDefault(event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  
+    fileInput.addEventListener('change', handleFileSelect, false);
+  
+    function handleFileSelect(event) {
+      const files = event.target.files || event.dataTransfer.files;
+  
+      // Process each selected or dropped file (image)
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const imageType = /^image\//;
+  
+        // Check if the selected or dropped file is an image
+        if (!imageType.test(file.type)) {
+          continue;
+        }
+  
+        // Create a new image element
+        const img = document.createElement('img');
+        img.classList.add('dropped-image');
+  
+        // Set the image source to the selected or dropped file
+        img.src = URL.createObjectURL(file);
+  
+        // Append the image to the image container
+        imageContainer.appendChild(img);
+      }
+    }
+  </script>
+  
+
+  <footer><em>Copyright &copy; 2023 Team Lannister - All rights reserved.</em></footer>
 </body>
+
+</html>
