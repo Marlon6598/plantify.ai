@@ -42,8 +42,8 @@ header .button { /* "HOME" "LEARN MORE" <-- Adjusts the style of these buttons *
     border: none;
     cursor: pointer;
 }
-#scrollButton {
-    margin-left: 100px; /* Adjusts the margin value for spacing between the buttons */
+#scrollButton { /* Adjusts the margin value for spacing between the buttons */
+    margin-left: 100px;
 }
 .navbar {
     float: left;
@@ -56,20 +56,20 @@ h3 { /* "Project 4 - Team Lannister" */
     color: #ffffff;
     text-align: right;
 }
-h1 { /* I.O.U. A CATCHY NAME */
+h1 { /* Plantify.ai */
     font-family: 'Nunito', sans-serif;
-    font-size: 54px;
+    font-size: 96px;
     color: #ffffff;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    padding-top: 80px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+    padding-top: 50px;
     margin-bottom: -20px;
     text-align: center;
 }
 h2 { /* AI-BASED PLANT IDENTIFIER */
     font-family: 'Nunito', sans-serif;
-    font-size: 80px;
+    font-size: 56px;
     color: #ffffff;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
     margin-top: 0px;
     padding-top: 0px;
     margin-bottom: -10px;
@@ -83,12 +83,12 @@ h2 { /* AI-BASED PLANT IDENTIFIER */
 }
 .button.getStarted { /* "GET STARTED" Button */
     font-family: 'Nunito', sans-serif;
-    font-size: 50px;
+    font-size: 32px;
     color: #FFFFFF;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
     background-color: #282828;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 22px 70px;
 }
 video { /* The video in the background */
     content: '';
@@ -109,14 +109,47 @@ video { /* The video in the background */
     min-height: 100vh;
     background-color: #ffffff;
     z-index: -1;
-  }
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    grid-template-rows: repeat(3, 260px);
+    justify-content: center;
+    align-items: end;
+    padding: 5px;
+    min-height: calc(100% - 100px); /* Removes blank space on the bottom of the overlay */
+}
+.text-block { /* Blocks that contain the text in the white space on the bottom half of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square-wrapper {
+    margin-top: 100px;
+}
+.square { 
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 2px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255); /* Example background color for the square */
+    box-shadow: 0 0px 25px rgb(225, 225, 225); /* Example drop shadow */
+    display: flex;
+    justify-content: center;
+}
+.bg-1 {
+    background-image: url('../../images/website/bg-1.png');
+}
+.bg-2 {
+    background-image: url('image1.jpg');
+}
 footer {
     position: relative;
     width: 100%;
     text-align: center;
+    color: #ffffff;
     background-color: #282828;
     padding: 10px;
 }
-.additional-content {
-    height: 110px;
+.additional-content { /* Adds height to the webpage */
+    height: 90px;
   }
