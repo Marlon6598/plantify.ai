@@ -110,12 +110,12 @@ video { /* The video in the background */
     background-color: #ffffff;
     z-index: -1;
     display: grid;
-    grid-template-columns: repeat(4, 400px);
-    grid-template-rows: repeat(3, 260px);
+    grid-template-columns: repeat(3, 600px);
+    grid-template-rows: repeat(4, 340px);
     justify-content: center;
     align-items: end;
     padding: 5px;
-    min-height: calc(100% - 100px); /* Removes blank space on the bottom of the overlay */
+    min-height: calc(100% + 500px); /* Removes blank space on the bottom of the overlay */
 }
 .text-block { /* Blocks that contain the text in the white space on the bottom half of the page */
     display: flex;
@@ -126,23 +126,34 @@ video { /* The video in the background */
     margin-top: 100px;
 }
 .square { 
-    width: 300px;
-    height: 200px;
+    width: 530px;
+    height: 275px;
     border-radius: 15px;
     margin: 2px;
     padding: 20px;
     background-color: rgb(255, 255, 255); /* Example background color for the square */
-    box-shadow: 0 0px 25px rgb(225, 225, 225); /* Example drop shadow */
+    box-shadow: 0 0px 10px rgb(225, 225, 225); /* Example drop shadow */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+.square p {
+    font-size: 15px;
+    margin: 0; /* Removes the default margin for the paragraph */
+    width: 60%;
 }
 .bg-1 {
-    background-image: url('../../images/website/bg-1.png');
+    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-1.jpg');
 }
 .bg-2 {
-    background-image: url('image1.jpg');
+    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-2.jpg');
 }
-footer {
+.bg-3 {
+    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-3.jpg');
+}
+.bg-4 {
+    background-image: url('https://github.com/Marlon6598/project-4-convolutional-neural-networks/raw/main/images/website/bg-4.jpg');
+}
+footer { /* The footer. */
     position: relative;
     width: 100%;
     text-align: center;
