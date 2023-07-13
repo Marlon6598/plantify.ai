@@ -117,6 +117,9 @@ video { /* The video in the background */
     padding: 5px;
     min-height: calc(100% + 500px); /* Removes blank space on the bottom of the overlay */
 }
+a {
+    color: #53ff7e; /* Changes the color of hyperlinks */
+}
 .text-block { /* Blocks that contain the text in the white space on the bottom half of the page */
     display: flex;
     justify-content: center;
